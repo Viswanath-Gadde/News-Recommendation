@@ -5,11 +5,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load dataset safely
-df = pd.read_json(
-    r"C:\Users\gadde\Projects\Youtube\Noor\news recommendation\News_Category_Dataset_v3.json",
-    lines=True,
-    nrows=50000
-)
+df = pd.read_json("News_Category_Dataset_v3.json", lines=True, nrows=50000)
+
 
 # Clean up missing or bad rows
 df = df.dropna(subset=['headline', 'short_description', 'category']).reset_index(drop=True)

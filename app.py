@@ -56,6 +56,6 @@ def index():
             message = "No similar articles found. Try a broader or different headline."
     return render_template("index.html", recommendations=recommendations, message=message)
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)
+
